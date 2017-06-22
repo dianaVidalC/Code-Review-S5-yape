@@ -18,17 +18,11 @@ const ResendCode = (update)=> {
     containerCode.append(formVerfication);
     containerCode.append(code);
 
-    input.on('keypress keyup',(e)=> {
-        if (input.val() == state.userCode) {
-            state.nextPage = RegisterUser;
-            update();
-        } else {
-            state.nextPage = ResendCode;
-        }
-    });
-
    $(_=>{
        contador(22,input.val(),reboot,update);
+       if (input.val().length === 0) {
+           intervalo(span, update);
+       }
    });
 
     return containerCode;
@@ -42,16 +36,18 @@ function contador(cont,inputVal,reboot,update,input){
             resendCodes(state.phone)
                 .then((codeResponse)=>{
                     console.log(codeResponse);
-                    //state.userCode = codeResponse;
-                    if(inputVal==codeResponse){
+                    state.userCode = codeResponse;
+                    //if(inputVal==codeResponse){
+
                         clearInterval(seconds);
-                        //state.nextPage = RegisterUser;
+                        state.nextPage = RegisterUser;
                         update();
-                    }else {
+
+                    /*}else {
                         $('#code-generated').empty();
                         $('#code-generated').text(state.userCode);
                         state.nextPage = ResendCode;
-                    }
+                    }*/
                 })
                 .catch((err) => {
                     console.log(err);
@@ -62,6 +58,7 @@ function contador(cont,inputVal,reboot,update,input){
             cont=22;
         }else {
             console.log(seconds);
+            console.log($('#code'));
             $('#code').on('keypress keyup',(e)=> {
                 if (inputVal == state.userCode) {
                     clearInterval(seconds);
@@ -73,5 +70,5 @@ function contador(cont,inputVal,reboot,update,input){
             });
         }
     },1000);
-    return seconds;
+    //return seconds;
 }
