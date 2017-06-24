@@ -4,7 +4,7 @@ const RegisterNumber = (update)=> {
     const containerRegister = $('<section class="container"></section>');
     const formVerfication = $('<form class="form-control flex"></form>');
     const divInput = $('<div class="box"></div>');
-    const input = $(`<input id="phone" type="number" pattern="[0-9]{9}" placeholder="Número de celular" required>`);
+    const input = $(`<input id="phone" type="cel" maxlength="9" placeholder="Número de celular" required>`);
     const icon = $(`<span class="icon cel"><img src="img/icons/phoneandnumber.png"></span>`);
     const divCheck = $('<div class="terms"></div>');
     const checkbox = $(`<input id="terms" type="checkbox">`);
@@ -20,8 +20,13 @@ const RegisterNumber = (update)=> {
     formVerfication.append(span);
     formVerfication.append(divCheck);
     formVerfication.append(button);
-    containerRegister.append(Instructions(resource.image,resource.title,resource.description));
+    containerRegister.append(Instructions(resource.image,resource.title,resource.description,""));
     containerRegister.append(formVerfication);
+
+    // input solo numeros y maximo 9 digitos, no cambiar a ECMA6 pq no agarra.
+    input.keyup(function (){
+        this.value = (this.value + '').replace(/[^0-9]/g, '');
+    });
 
     input.on('keyup keypress',(e)=>{
         disableButton(input.val(),checkbox,button);
@@ -31,7 +36,6 @@ const RegisterNumber = (update)=> {
         e.preventDefault();
         disableButton(input.val(),checkbox,button);
     });
-
 
     button.on('click',(e)=>{
         e.preventDefault();

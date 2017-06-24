@@ -14,7 +14,7 @@ const ResendCode = (update)=> {
     formVerfication.append(divInput);
     p.append(reboot);
     formVerfication.append(p);
-    containerCode.append(Instructions(resource.image,resource.title,resource.description));
+    containerCode.append(Instructions(resource.image,resource.title,resource.description,state.phone));
     containerCode.append(formVerfication);
     containerCode.append(code);
 
@@ -37,17 +37,20 @@ function contador(cont,inputVal,reboot,update,input){
                 .then((codeResponse)=>{
                     console.log(codeResponse);
                     state.userCode = codeResponse;
-                    //if(inputVal==codeResponse){
+                    if(inputVal==codeResponse){
 
                         clearInterval(seconds);
                         state.nextPage = RegisterUser;
                         update();
 
-                    /*}else {
+                    }else {
                         $('#code-generated').empty();
                         $('#code-generated').text(state.userCode);
                         state.nextPage = ResendCode;
-                    }*/
+                    }
+
+
+
                 })
                 .catch((err) => {
                     console.log(err);
@@ -70,5 +73,5 @@ function contador(cont,inputVal,reboot,update,input){
             });
         }
     },1000);
-    //return seconds;
+    return seconds;
 }
