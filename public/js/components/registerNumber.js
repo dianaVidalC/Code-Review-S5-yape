@@ -29,12 +29,20 @@ const RegisterNumber = (update)=> {
     });
 
     input.on('keyup keypress',(e)=>{
-        disableButton(input.val(),checkbox,button);
+        if(input.val().length == 9 && checkbox.prop('checked')) {
+            enabledButton(button.attr('id'));
+        }else {
+            disabledButton(button.attr('id'));
+        }
     });
 
     checkbox.on('change', (e)=>{
         e.preventDefault();
-        disableButton(input.val(),checkbox,button);
+        if(input.val().length == 9 && checkbox.prop('checked')) {
+            enabledButton(button.attr('id'));
+        }else {
+            disabledButton(button.attr('id'));
+        }
     });
 
     button.on('click',(e)=>{
@@ -54,11 +62,3 @@ const RegisterNumber = (update)=> {
 
     return containerRegister;
 };
-const regexNumber = /[0-9]{9}/;
-function disableButton(queryInput,check,queryButton) {
-    if(queryInput.length == 9 && check.prop('checked')) {
-        queryButton.removeAttr('disabled');
-    }else {
-        queryButton.attr('disabled','disabled');
-    }
-}
