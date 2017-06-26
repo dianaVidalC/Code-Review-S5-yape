@@ -10,7 +10,7 @@ const RegisterNumber = (update)=> {
     const checkbox = $(`<input id="terms" type="checkbox">`);
     const span = $(`<span></span>`);
     const label = $('<label for="terms">Acepto los <span>Términos y condiciones</span></label>');
-    const button = $('<button type="submit" class="disabled" disabled>Continuar</button>');
+    const button = $('<button id="btnSend" type="submit" disabled>Continuar</button>');
 
     divInput.append(input);
     divInput.append(icon);

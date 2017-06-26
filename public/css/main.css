@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body,h1,h2,h3,h4,h5,h6,span,label,small{
     font-family: 'Roboto',sans-serif;
+}
+body,h1,h2,h3,h4,h5,h6,span,label{
     line-height: 21px;
     color: #212121;
 }
@@ -79,9 +79,6 @@ button:enabled {
     outline: none;
     font-size: 1.2rem;
 }
-.box #phone {
-    padding-left: 100px;
-}
 
 .form-control input[type="checkbox"]  {
     width: 20px;
@@ -102,9 +99,6 @@ button:enabled {
     height: 150px;
 }
 
-.js-error {
-    border-bottom:1px solid #F44336;
-}
 
 .terms span {
     color: #00c3a3;
@@ -112,6 +106,10 @@ button:enabled {
 
 .box {
     position: relative;
+}
+
+.box #phone {
+    padding-left: 100px;
 }
 
 .box .icon img{
@@ -122,6 +120,12 @@ button:enabled {
 }
 .box .cel img{
     width: 80px;
+}
+.icon-clock {
+    position: relative;
+    width: 26px;
+    top: 6px;
+    margin: 0 7px;
 }
 .scan {
     width: 100%;

@@ -6,7 +6,7 @@ const ResendCode = (update)=> {
     const divInput = $('<div class="box"></div>');
     const input = $(`<input id="code" type="number" pattern="^[0-9]{6}" placeholder=". . . . . ." required>`);
     const icon = $(`<span class="icon"><img src="img/icons/lock.png"></span>`);
-    const p = $('<p>Reintenta en <img src="img/icons/clock.png"></p>');
+    const p = $('<p>Reintenta en <img class="icon-clock" src="img/icons/clock.png"></p>');
     const reboot = $('<span id="second"></span>');
     const code = $(`<p>Tu CÓDIGO:<span id="code-generated">${state.userCode}</span></p>`);
 
@@ -19,13 +19,15 @@ const ResendCode = (update)=> {
     containerCode.append(formVerfication);
     containerCode.append(code);
 
+    interval = setInterval(counter,1000);
+
     input.on('keypress keyup',(e)=> {
         if (input.val() == state.userCode) {
             stopInterval();
+            state.nextPage = RegisterUser;
             update();
         }
     });
-    interval = setInterval(counter,1000);
 
     return containerCode;
 };
