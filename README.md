@@ -78,4 +78,4 @@ El proyecto final consistió en hacer una réplica de la página Yape del bcp en
 |---|---|---|---|
 [Erika Vidal](https://github.com/dianaVidalC) | [Miriam Peralta](https://github.com/Fiorellacr24/) | [Emma Alva](https://github.com/EmmAlva) | [Ruth Salvador](https://github.com/RuthSalvador) 
 
-**Vea el resultado aquí: ** https://code-review-yape.herokuapp.com/
+**Vea el resultado aquí:** https://code-review-yape.herokuapp.com/
