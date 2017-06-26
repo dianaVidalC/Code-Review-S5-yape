@@ -69,7 +69,7 @@ El proyecto final consistió en hacer una réplica de la página Yape del bcp en
 - Aquí :https://docs.google.com/document/d/1neaML7JvqtajPqByZzyo6AfmqtKlXo-kI0tY1jdB5JQ/edit
 
 
-## Team Project
+## Team Project: Ergo Proxy
 
 <a href="https://github.com/dianaVidalC"><img src="https://avatars3.githubusercontent.com/u/25887195?v=3&s=460" alt="Erika Vidal" height="150"></a> |
 <a href="https://github.com/miriampc"><img src="https://avatars3.githubusercontent.com/u/25912580?v=3&s=460" alt="Miriam Peralta" height="150"></a>
@@ -78,4 +78,4 @@ El proyecto final consistió en hacer una réplica de la página Yape del bcp en
 |---|---|---|---|
 [Erika Vidal](https://github.com/dianaVidalC) | [Miriam Peralta](https://github.com/Fiorellacr24/) | [Emma Alva](https://github.com/EmmAlva) | [Ruth Salvador](https://github.com/RuthSalvador) 
 
-**Vea el resultado aquí:
+**Vea el resultado aquí:**
