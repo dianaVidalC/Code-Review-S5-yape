@@ -75,7 +75,8 @@ El proyecto final consistió en hacer una réplica de la página Yape del bcp en
 <a href="https://github.com/miriampc"><img src="https://avatars3.githubusercontent.com/u/25912580?v=3&s=460" alt="Miriam Peralta" height="150"></a>
 <a href="https://github.com/EmmAlva"><img src="https://avatars2.githubusercontent.com/u/25912496?v=3&s=460" alt="Emma Tapia" height="150"></a>
 <a href="https://github.com/RuthSalvador"><img src="https://avatars2.githubusercontent.com/u/25906896?v=3&s=460" alt="Ruth Salvador" height="150"></a>
-|---|---|---|---|
-[Erika Vidal](https://github.com/dianaVidalC) | [Miriam Peralta](https://github.com/Fiorellacr24/) | [Emma Alva](https://github.com/EmmAlva) | [Ruth Salvador](https://github.com/RuthSalvador) 
+<a href="https://github.com/strongwarmi"><img src="https://avatars1.githubusercontent.com/u/25912576?v=3&s=460" alt="Eliana Silva" height="150"></a>
+|---|---|---|---|---|
+[Erika Vidal](https://github.com/dianaVidalC) | [Miriam Peralta](https://github.com/Fiorellacr24/) | [Emma Alva](https://github.com/EmmAlva) | [Ruth Salvador](https://github.com/RuthSalvador)| [Eliana Silva](https://github.com/strongwarmi) 
 
 **Vea el resultado aquí:** https://code-review-yape.herokuapp.com/
