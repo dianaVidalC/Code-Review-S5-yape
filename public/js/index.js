@@ -17,10 +17,6 @@ const state = {
     nextPage : null
 }
 $(_=>{
-    $.get('http://localhost:3000/api/',(error, data)=>{
-        state.user = data;
-        console.log(data);
         const root =$('#root');
         render(root);
-    });
 })

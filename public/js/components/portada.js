@@ -13,7 +13,5 @@ const Portada = (update)=>{
         update();
     });
 
-
-
     return containerPortada;
 };
